@@ -68,17 +68,13 @@ if (command ==="spotify-this-song"){
             return console.log('Error occurred: ' + err);
         }
         
-        // function replacer(key, value) {
-        //     // Filtering out properties
-        //     if (typeof value === 'Artists') {
-        //         return value;
-        //     }
-            
-        // }
+      
         
-        console.log(JSON.stringify(data, null, 2));
-        // console.log(JSON.stringify(data, replacer, 2));
-
+        
+        console.log(JSON.stringify(data.tracks.items[0].album.name, null, 2));//album name
+        console.log(JSON.stringify(data.tracks.items[0].album.artists[0].name, null, 2));//artist name
+        console.log(JSON.stringify(data.tracks.items[0].name, null, 2));//name of the song
+        console.log(JSON.stringify(data.tracks.items[0].href, null, 2));//website of  song
         
 
 
