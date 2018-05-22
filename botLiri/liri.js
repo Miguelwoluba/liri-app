@@ -71,10 +71,13 @@ if (command ==="spotify-this-song"){
       
         
         
-        console.log(JSON.stringify(data.tracks.items[0].album.name, null, 2));//album name
+        
         console.log(JSON.stringify(data.tracks.items[0].album.artists[0].name, null, 2));//artist name
         console.log(JSON.stringify(data.tracks.items[0].name, null, 2));//name of the song
         console.log(JSON.stringify(data.tracks.items[0].href, null, 2));//website of  song
+        console.log(JSON.stringify(data.tracks.items[0].album.name, null, 2));//album name
+        
+        
         
 
 
@@ -116,8 +119,11 @@ if (command ==="do-what-it-says"){
             if (err) {
                 return console.log('Error occurred: ' + err);
             }
-            console.log(JSON.stringify(data, null, 2));
-
+            
+            console.log(JSON.stringify(data.tracks.items[0].album.artists[0].name, null, 2));//artist name
+            console.log(JSON.stringify(data.tracks.items[0].name, null, 2));//name of the song
+            console.log(JSON.stringify(data.tracks.items[0].href, null, 2));//website of  song
+            console.log(JSON.stringify(data.tracks.items[0].album.name, null, 2));//album name
         });
 
 });
